@@ -5,6 +5,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const loader = require('sass-loader');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const WorkboxPlugin = require('workbox-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     entry: './src/client/index.js',
@@ -15,6 +16,14 @@ module.exports = {
     mode: 'development',
     devtool: 'source-map',
     stats: 'verbose',
+    // devServer: {
+    //     port: 3000,
+    //
+    //     proxy: {
+    //
+    //         '/add': 'http://localhost:8081'
+    //     }
+    // },
     module: {
         rules: [
             {
@@ -37,6 +46,7 @@ module.exports = {
                         loader: 'file-loader',
                         options: {
                             name: '[name].[ext]',
+                            outputPath: "media",
                         }
                     }
                 ]
@@ -44,6 +54,11 @@ module.exports = {
         ]
     },
     plugins: [
+
+        new CopyWebpackPlugin({
+            patterns: [{ from: './src/client/media',
+                to: 'media'}]
+        }),
         new HtmlWebPackPlugin({
             template: "./src/client/views/index.html",
             filename: "./index.html",
@@ -60,3 +75,4 @@ module.exports = {
         new WorkboxPlugin.GenerateSW()
     ]
 }
+

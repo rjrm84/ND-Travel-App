@@ -8,10 +8,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="56569d4d-f2b8-488f-9205-293723b40c64" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.babelrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/service-worker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/js/dateCounter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/js/dateCounter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/js/setToday.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/js/setToday.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/js/submit.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/js/submit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/js/today.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/js/today.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/js/uiUpdater.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/js/uiUpdater.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/js/validator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/js/validator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/styles/media.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/styles/media.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/styles/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/styles/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/views/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/views/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.dev.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.prod.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.prod.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +136,7 @@
       <workItem from="1631046526226" duration="18719000" />
       <workItem from="1631150258220" duration="339000" />
       <workItem from="1631150660690" duration="66000" />
-      <workItem from="1631150827879" duration="4565000" />
+      <workItem from="1631150827879" duration="27530000" />
     </task>
     <servers />
   </component>

@@ -1,21 +1,21 @@
 /* SCSS RGB */
-$blue-jeans: rgba(77, 168, 224, 1);
-$green-blue: rgba(33, 101, 164, 1);
-$spanish-orange: rgba(225, 105, 0, 1);
-$middle-yellow: rgba(255, 236, 31, 1);
-$spanish-viridian: rgba(12, 124, 89, 1);
+$blue-1: rgba(77, 168, 224, 1);
+$blue-2: rgba(33, 101, 164, 1);
+$orange-nl: rgba(225, 105, 0, 1);
+$yellow-stone: rgba(255, 236, 31, 1);
+$green-solid: rgba(12, 124, 89, 1);
 
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
   font-family: serif;
+  color: $orange-nl;
 }
 
 .container {
-  background: url(../media/background-image.png) no-repeat center;
   background-size: cover;
-  background-attachment: fixed;
+background-image: url("https://i.picsum.photos/id/100/2500/1656.jpg?hmac=gWyN-7ZB32rkAjMhKXQgdHOIBRHyTSgzuOK6U0vXb1w");
   max-width: 449px;
   margin: 0 auto;
   overflow: hidden;
@@ -28,9 +28,9 @@ $spanish-viridian: rgba(12, 124, 89, 1);
   flex-direction: column;
   justify-content: center;
   .logo {
-    font-family: "Pacifico", cursive;
+    font-family: "parisiene", cursive;
     letter-spacing: 8px;
-    color: $middle-yellow;
+    color: $blue-1;
     text-align: center;
     font-size: 1.75rem;
   }
@@ -49,21 +49,21 @@ $spanish-viridian: rgba(12, 124, 89, 1);
       font-size: 1rem;
       width: 60%;
       margin: 1rem;
-      border: 3px solid $green-blue;
+      border: 3px solid $blue-2;
       border-radius: 15px;
       cursor: pointer;
       &:hover {
-        border: 3px solid $spanish-orange;
+        border: 3px solid $yellow-stone;
       }
       &:focus {
-        border: 3px solid $spanish-orange;
+        border: 3px solid $yellow-stone;
         outline: 0;
       }
     }
     .submit:hover,
     .submit:focus {
-      background: $spanish-orange;
-      color: #fff;
+      background: $yellow-stone;
+      color: #000;
       font-size: 1.5rem;
       transition: font-size ease-in 500ms;
     }
@@ -78,11 +78,11 @@ $spanish-viridian: rgba(12, 124, 89, 1);
 
   // display: none;
   .trip-info {
-    border: 3px solid $middle-yellow;
-    background: rgba(190, 188, 188, 0.5);
+    border: 3px solid $blue-2;
+    background: transparent;
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 30%;
     transform: translate(-50%, -50%);
     width: 100%;
     max-height: 90%;

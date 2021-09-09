@@ -1,3 +1,4 @@
+
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const dotenv = require('dotenv');
@@ -14,104 +15,79 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors());
 
-const port = 8080;
+const port = 4000;
 const server = app.listen(port, () => console.log(`Running on port: ${port}`));
 
 app.use(express.static('dist'));
-app.get('/', (req, res) => res.sendFile(path.resolve('dist/index.html')));
+app.get('/all', (req, res) => res.sendFile('dist/index.html'));
+
+// app.get('/all', sendData);
+// function sendData(req, res) {
+//     res.send(projectData);
+//     console.log(projectData)
+// };
+
+// test route
+app.get('/test', async (req, res) => {
+    res.json({ msg: 'pass!' })
+})
+
+// Post Route
 
 app.post('/destination', async (req, res) => {
-    const geoKey = process.env.GEONAMES_KEY;
-    const weatherKey = process.env.WEATHERBIT_KEY;
-    const pixabayKey = process.env.PIXABAY_KEY;
 
-    const city = req.body.city;
-    let data = {};
+    let userInput = req.body
+    let projectData = ''
+    let geonameData = ''
+    let weatherData = ''
+    let pixabayData = ''
+    // call geonames
+    const username = process.env.GN_username;
+    const geonameBaseURL = `http://api.geonames.org/search?q=${userInput.city}&maxRows=1&type=json&username=${username}`
 
-    const geoUrl = `http://api.geonames.org/searchJSON?q=${city}&maxRows=1&username=${geoKey}`;
+    await (fetch(encodeURI(geonameBaseURL))
+        // get lat long countryName
+        .then(res => res.json())
+        .then(data => geonameData = { lng: data.geonames[0].lng, lat: data.geonames[0].lat, countryName: data.geonames[0].countryName, city: data.geonames[0].toponymName })
+        .catch(err => {
+            console.log(err)
+            return err.message
+        }))
 
-    await fetch(geoUrl)
-        .then(response => response.json())
-        .then(response => {
-            const { lat, lng, toponymName, countryName } = response.geonames[0];
-            data = {
-                city: toponymName,
-                countryName,
-                lat,
-                lng
-            }
+    // WEATHERBIT API
+    const key = process.env.weather_KEY
+    const weatherbitURL = 'http://api.weatherbit.io/v2.0/current?'
+
+    const url = `${weatherbitURL}lat=${geonameData.lat}&lon=${geonameData.lng}&key=${key}&units=M`
+    // Call API
+    await fetch(url)
+        // get temperature and weather description
+        .then(res => res.json())
+        .then(res => weatherData = { temp: res.data[0].temp, weather: res.data[0].weather.description, icon: res.data[0].weather.icon })
+        .catch(err => {
+            console.log(err)
+            return err.message
         })
-        .catch(error => console.log('error', error));
+    // PIXABAY API
+    const pixabayKey = process.env.pixabay_KEY
+    const pixabayURL = `https://pixabay.com/api/?key=${pixabayKey}&q=${geonameData.city}&category=places&image_type=photo&orientation=horizontal&safesearch=true`
+    // Call API
 
-    const currentWeatherUrl = `https://api.weatherbit.io/v2.0/current?lat=${data.lat}&lon=${data.lng}&key=${weatherKey}`;
-
-    await fetch(currentWeatherUrl)
-        .then(response => response.json())
-        .then(response => {
-            data = {
-                ...data,
-                curentWeather: response.data[0]
-            }
-        })
-        .catch(error => console.log('error', error));
-
-    const forecastWeatherUrl = `https://api.weatherbit.io/v2.0/forecast/daily?lat=${data.lat}&lon=${data.lng}&key=${weatherKey}`;
-
-    await fetch(forecastWeatherUrl)
-        .then(response => response.json())
-        .then(response => {
-            data = {
-                ...data,
-                forecastWeather: response.data
-            }
-        })
-        .catch(error => console.log('error', error));
-
-    const pixabayQueryCity  = `&q=${data.city}&orientation=horizontal&image_type=photo`;
-    const pixabayQueryCountry  = `&q=${data.countryName}&orientation=horizontal&image_type=photo`;
-    let pixabayUrl = `https://pixabay.com/api/?key=${pixabayKey}${pixabayQueryCity}`;
-    let imageURL = '';
-
-    await fetch(pixabayUrl)
-        .then(response => response.json())
-        .then(response => {
-            imageURL = response.hits[0].webformatURL;
-        })
-        .catch(error => console.log('error', error));
-
-    if(imageURL === '') {
-        let pixabayUrl = `https://pixabay.com/api/?key=${pixabayKey}${pixabayQueryCountry}`;
-        await fetch(pixabayUrl)
-            .then(response => response.json())
-            .then(response => {
-                imageURL = response.hits[0].webformatURL;
+    await (fetch(pixabayURL)
+            .then(res =>
+                res.json()
+            )
+            .then(data => {
+                pixabayData = { img: data.hits[0].webformatURL }
             })
-            .catch(error => console.log('error', error));
-    }
+            .catch(err => {
+                console.log(err)
+                return err.message
+            })
+    )
 
-    data = {
-        ...data,
-        imageURL
-    }
+    projectData = { temp: weatherData.temp, weather: weatherData.weather, icon: weatherData.icon, cityName: geonameData.city, countryName: geonameData.countryName, date: userInput.date, img: pixabayData.img }
+    res.send(projectData)
 
-    res.send(data);
-});
-
-app.get('/background', (req, res) => {
-    const key = process.env.PIXABAY_KEY;
-    const query = '&q=city&orientation=horizontal&image_type=photo';
-    const url = `https://pixabay.com/api/?key=${key}${query}`;
-    const options = {
-        method: 'POST'
-    }
-    fetch(url, options)
-        .then(response => response.json())
-        .then(data => {
-            const randomImage = Math.floor(Math.random() * 20);
-            const image = data.hits[randomImage];
-            if(image !== undefined || image !== '') {
-                res.send({url:image.largeImageURL});
-            }
-        })
-        .catch(error => console.log('error', error));
-});
+})
+module.exports = app
