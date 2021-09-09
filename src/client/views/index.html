@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+            href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+            rel="stylesheet"
+    />
+    <title>Wanderlust</title>
+</head>
+<body>
+<div class="container">
+    <section class="input-container">
+        <div class="logo-wrapper"><h1 class="logo">WANDERLUST</h1></div>
+        <form action="" class="form" id="form">
+            <label for="city"></label>
+            <input
+                    type="text"
+                    class="city"
+                    id="city"
+                    placeholder="Enter Your Destination"
+            />
+            <label for="date"></label>
+            <input
+                    type="text"
+                    id="date"
+                    placeholder="Enter Date: MM/DD/YYY"
+                    onfocus="(this.type='date')"
+            />
+            <button type="submit" class="submit" id="submit">Let's Go!</button>
+        </form>
+    </section>
+    <section class="results" id="results">
+        <div class="trip-info" id="trip-info">
+            <div class="destination" id="destination">
+                <!-- dynamically injected through JS -->
+            </div>
+            <div class="weather" id="weather">
+                <!-- dynamically injected through JS -->
+            </div>
+        </div>
+    </section>
+</div>
+<script>
+    // Check that service workers are supported
+    if ("serviceWorker" in navigator) {
+        // Use the window load event to keep the page load performant
+        window.addEventListener("load", () => {
+            navigator.serviceWorker.register("/service-worker.js");
+        });
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+{
+  "name": "nd-travel-app",
+  "version": "1.0.0",
+  "description": "Travel App Udacity Nano-Degree",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "jest --env=jsdom",
+    "start": "node src/server/start.js",
+    "build-dev": "webpack-dev-server --config webpack.dev.js --open",
+    "build-prod": "webpack --config webpack.prod.js",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rjrm84/ND-Travel-App.git"
+  },
+  "author": "Raul Rodriguez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rjrm84/ND-Travel-App/issues"
+  },
+  "homepage": "https://github.com/rjrm84/ND-Travel-App#readme",
+  "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.4",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.3.2",
+    "jest": "^27.1.1",
+    "mini-css-extract-plugin": "^2.2.2",
+    "node-sass": "^6.0.1",
+    "optimize-css-assets-webpack-plugin": "^6.0.1",
+    "sass-loader": "^12.1.0",
+    "style-loader": "^3.2.1",
+    "terser-webpack-plugin": "^5.2.3",
+    "webpack": "^5.52.0",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.1.1",
+    "workbox-webpack-plugin": "^6.2.4"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.1"
+  }
+}
