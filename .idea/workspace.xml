@@ -7,7 +7,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56569d4d-f2b8-488f-9205-293723b40c64" name="Changes" comment="" />
+    <list default="true" id="56569d4d-f2b8-488f-9205-293723b40c64" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.babelrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,12 +47,8 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="main" />
-                    <option name="lastUsedInstant" value="1630981580" />
-                  </RecentBranch>
-                  <RecentBranch>
-                    <option name="branchName" value="master" />
-                    <option name="lastUsedInstant" value="1630981579" />
+                    <option name="branchName" value="gh-pages" />
+                    <option name="lastUsedInstant" value="1631154981" />
                   </RecentBranch>
                 </list>
               </option>
@@ -59,7 +60,9 @@
     </option>
   </component>
   <component name="ProjectId" id="1xmlXM0tGHmSk760yElUUHeXwdE" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -116,7 +119,7 @@
       <workItem from="1631046526226" duration="18719000" />
       <workItem from="1631150258220" duration="339000" />
       <workItem from="1631150660690" duration="66000" />
-      <workItem from="1631150827879" duration="3876000" />
+      <workItem from="1631150827879" duration="4565000" />
     </task>
     <servers />
   </component>
