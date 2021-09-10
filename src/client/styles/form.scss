@@ -1,0 +1,39 @@
+$btn-color: #d2d4c8;
+$btn-hover-color: #2e3532;
+$color: #2e3532;
+$hover-color: #d2d4c8;
+
+
+form {
+
+}
+
+input {
+    margin: 10px 0;
+    -webkit-appearance: none;
+    font-family: sans-serif;
+    border:1px solid #ecf0f1;
+}
+
+#btn-submit {
+    margin-left: 2px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    width: 100px;
+    background-color: $btn-color;
+    color: $color;
+    border: 1px $btn-hover-color solid;
+
+    &:hover {
+        background-color: $btn-hover-color;
+        color: $hover-color;
+    }
+}
+
+input {
+    appearance: none;
+    -webkit-appearance: none;
+    font-family: sans-serif;
+    border:1px solid #ecf0f1;
+}
