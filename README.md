@@ -5,7 +5,6 @@
 <hr>
 App takes in 2 inputs from the user, <strong>City</strong> and <strong>Date</strong>, to make asynchronous fetch calls from several APIs and return data pertaining to the destination such as current weather, image of destination, and a countdown until travel date.
 
-### Demo
 
 
 ### Startup
@@ -15,7 +14,7 @@ App takes in 2 inputs from the user, <strong>City</strong> and <strong>Date</str
 1. Clone my Repo
 2. Make sure you have installed node and npm
 3. On your terminal: <code> npm run start </code>
-4. On your browser: visit (http://localhost:8000/)
+
 
 ### Technologies used
 
