@@ -1,131 +1,108 @@
 /* SCSS RGB */
 $blue-1: rgba(77, 168, 224, 1);
 $blue-2: rgba(33, 101, 164, 1);
-$orange-nl: rgba(225, 105, 0, 1);
+$nzl: rgba(0, 0, 0, 0.73);
 $yellow-stone: rgba(255, 236, 31, 1);
 $green-solid: rgba(12, 124, 89, 1);
 
 * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  font-family: serif;
-  color: $orange-nl;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: serif;
+    color: $nzl;
 }
 
 .container {
-  background-size: cover;
-background-image: url("https://i.picsum.photos/id/100/2500/1656.jpg?hmac=gWyN-7ZB32rkAjMhKXQgdHOIBRHyTSgzuOK6U0vXb1w");
-  max-width: 449px;
-  margin: 0 auto;
-  overflow: hidden;
+    background-size: cover;
+    background-image: url("https://i.picsum.photos/id/100/2500/1656.jpg?hmac=gWyN-7ZB32rkAjMhKXQgdHOIBRHyTSgzuOK6U0vXb1w");
+    max-width: 449px;
+    margin: 0 auto;
+    overflow: hidden;
 }
 // Input form
 .input-container {
-  min-height: 100vh;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  .logo {
-    font-family: "parisiene", cursive;
-    letter-spacing: 8px;
-    color: $blue-1;
-    text-align: center;
-    font-size: 1.75rem;
-  }
-  .form {
+    min-height: 100vh;
+    padding: 10px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    margin-top: 3rem;
+    .logo {
+        font-family: "parisiene", cursive;
+        letter-spacing: 8px;
+        color: $blue-1;
+        text-align: center;
+        font-size: 1.75rem;
+    }
+    .form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 3rem;
 
-    // Buttons
-    input,
-    .submit {
-      height: 3.5rem;
-      text-align: center;
-      font-size: 1rem;
-      width: 60%;
-      margin: 1rem;
-      border: 3px solid $blue-2;
-      border-radius: 15px;
-      cursor: pointer;
-      &:hover {
-        border: 3px solid $yellow-stone;
-      }
-      &:focus {
-        border: 3px solid $yellow-stone;
-        outline: 0;
-      }
+        // Buttons
+        input,
+        .submit {
+            height: 3.5rem;
+            text-align: center;
+            font-size: 1rem;
+            width: 60%;
+            margin: 1rem;
+            border: 3px solid $blue-2;
+            border-radius: 15px;
+            cursor: pointer;
+            &:hover {
+                border: 3px solid $yellow-stone;
+            }
+            &:focus {
+                border: 3px solid $yellow-stone;
+                outline: 0;
+            }
+        }
+        .submit:hover,
+        .submit:focus {
+            background: $yellow-stone;
+            color: $nzl;
+            font-size: 1.5rem;
+            transition: font-size ease-in 500ms;
+        }
     }
-    .submit:hover,
-    .submit:focus {
-      background: $yellow-stone;
-      color: #000;
-      font-size: 1.5rem;
-      transition: font-size ease-in 500ms;
-    }
-  }
 }
 // Results
 
-.results {
-  min-height: 100vh;
-  position: relative;
-  display: none;
 
-  // display: none;
-  .trip-info {
+.holder_entry {
+    padding: 10px;
     border: 3px solid $blue-2;
-    background: transparent;
-    position: absolute;
-    left: 50%;
-    top: 30%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    max-height: 90%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    h2 {
-      text-align: center;
-    }
-    li {
-      list-style: none;
-    }
-    .destination {
-      display: flex;
-      flex-direction: column;
-      li {
-        margin: 0.5rem 0 0 0.5rem;
-        font-size: 1.2rem;
-      }
-      img {
-        width: 100%;
-      }
-    }
-  }
+    border-radius: 5px;
+    margin: 200px;
 }
 
-.weather {
-  width: 100%;
-  text-align: center;
-  h3 {
-    margin: 0.5rem;
-  }
+.responsive {
+    place-self: center;
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    background: linear-gradient(145deg, #cacaca, #f0f0f0);
+    box-shadow: 20px 20px 20px #bebebe;
+    margin: 10px;
+}
+#weathercard {
+    display: grid;
+    grid-template-columns: repeat(2, 300px);
+    font-size: 2vw;
+    font-family: sans-serif;
+}
 
-  .weather-data {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-
-    li {
-      font-size: 1.2rem;
-      font-weight: 600;
-      padding: 0.5rem;
-    }
-  }
+#cityRes,
+#days,
+#tripLength,
+#currentWeather,
+#weatherForecast {
+    place-self: center;
+    font-size: 2vw;
+    font-family: sans-serif;
+    padding: 5px;
+    margin: 5px;
 }

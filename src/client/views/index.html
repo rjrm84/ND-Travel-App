@@ -26,23 +26,27 @@
             <label for="date"></label>
             <input
                     type="text"
-                    id="date"
+                    id="arrival"
                     placeholder="Enter Date: MM/DD/YYY"
                     onfocus="(this.type='date')"
             />
-            <button type="submit" class="submit" id="submit">Ready to Go!</button>
+            <button type="submit" class="submit" id="search">Ready to Go!</button>
         </form>
     </section>
-    <section class="results" id="results">
-        <div class="trip-info" id="trip-info">
-            <div class="destination" id="destination">
+
+
                 <!-- DOM Manipulation  -->
-            </div>
-            <div class="weather" id="weather">
+            <div class="holder_entry">
+                <img id="picture" src="" class="responsive"></img>
+                <div id="cityRes"></div>
+                <div id="days"></div>
+                <div id="weatherCard">
+                    <div id="currentWeather"></div>
+                    <div id="weatherForecast"></div>
+                </div>
                 <!-- DOM Manipulation -->
-            </div>
-        </div>
-    </section>
+
+
 </div>
 <script>
     // Check that service workers are supported
