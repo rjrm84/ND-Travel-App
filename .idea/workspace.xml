@@ -8,28 +8,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="56569d4d-f2b8-488f-9205-293723b40c64" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/client/js/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/client/js/utils.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/server/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.babelrc" beforeDir="false" afterPath="$PROJECT_DIR$/.babelrc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/__test__/dateCounter.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/__test__/server.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/js/dateCounter.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/js/setToday.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/js/submit.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/js/today.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/js/uiUpdater.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/js/validator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/media/background-image.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/styles/footer.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/styles/form.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/styles/header.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/styles/resets.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/styles/media.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/styles/media.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/styles/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/styles/style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/views/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/views/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,7 +127,7 @@
       <workItem from="1631150660690" duration="66000" />
       <workItem from="1631150827879" duration="59239000" />
       <workItem from="1631311056909" duration="1290000" />
-      <workItem from="1631360646259" duration="13405000" />
+      <workItem from="1631360646259" duration="19010000" />
     </task>
     <servers />
   </component>

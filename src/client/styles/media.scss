@@ -5,6 +5,95 @@ $orange-nl: rgba(225, 105, 0, 1);
 $yellow-stone: rgba(255, 236, 31, 1);
 $green-solid: rgba(12, 124, 89, 1);
 
+
+@media (min-width: 280px) {
+  .container {
+    max-width: 768px;
+  }
+
+  .input-container {
+    .logo {
+      font-size: 3rem;
+    }
+  }
+
+  .destination {
+    img {
+      border-radius: 15px;
+    }
+  }
+  .holder_entry {
+    padding: 10px;
+    border: transparent;
+    border-radius: 5px;
+    margin:10px;
+  }
+
+  #weathercard {
+    display: grid;
+    grid-template-columns: repeat(2, 300px);
+    font-size: 7vw;
+    font-family: sans-serif;
+  }
+
+  #cityRes,
+  #days,
+  #tripLength,
+  #currentWeather,
+  #weatherForecast {
+    place-self: center;
+    font-size: 7vw;
+    font-family: sans-serif;
+    padding: 5px;
+    margin: 50px;
+  }
+
+}
+
+@media (min-width: 320px) {
+  .container {
+    max-width: 768px;
+  }
+
+  .input-container {
+    .logo {
+      font-size: 3rem;
+    }
+  }
+
+    .destination {
+      img {
+        border-radius: 15px;
+      }
+    }
+  .holder_entry {
+    padding: 10px;
+    border: transparent;
+    border-radius: 5px;
+    margin:10px;
+  }
+
+  #weathercard {
+    display: grid;
+    grid-template-columns: repeat(2, 300px);
+    font-size: 7vw;
+    font-family: sans-serif;
+  }
+
+  #cityRes,
+  #days,
+  #tripLength,
+  #currentWeather,
+  #weatherForecast {
+    place-self: center;
+    font-size: 7vw;
+    font-family: sans-serif;
+    padding: 5px;
+    margin: 50px;
+  }
+
+  }
+
 @media (min-width: 450px) {
   .container {
     max-width: 768px;
@@ -16,18 +105,34 @@ $green-solid: rgba(12, 124, 89, 1);
     }
   }
 
-  .results {
-    .trip-info {
-      h2 {
-        font-size: 2rem;
-        margin: 0.5rem 0;
-      }
+  .destination {
+    img {
+      border-radius: 15px;
     }
-    .destination {
-      img {
-        border-radius: 15px;
-      }
-    }
+  }
+  .holder_entry {
+    padding: 10px;
+    border: transparent;
+    border-radius: 5px;
+    margin:10px;
+  }
+  #weathercard {
+    display: grid;
+    grid-template-columns: repeat(2, 300px);
+    font-size: 7vw;
+    font-family: sans-serif;
+  }
+
+  #cityRes,
+  #days,
+  #tripLength,
+  #currentWeather,
+  #weatherForecast {
+    place-self: center;
+    font-size: 7vw;
+    font-family: sans-serif;
+    padding: 5px;
+    margin: 50px;
   }
 }
 
@@ -50,24 +155,29 @@ $green-solid: rgba(12, 124, 89, 1);
       }
     }
   }
+  .holder_entry {
+    padding: 10px;
+    border: transparent;
+    border-radius: 5px;
+    margin:10px;
+  }
+  #weathercard {
+    display: grid;
+    grid-template-columns: repeat(2, 300px);
+    font-size: 7vw;
+    font-family: sans-serif;
+  }
 
-  .container .trip-info {
-    max-width: 1200px;
-    border-radius: 15px;
-    flex-direction: row;
-    .destination {
-      margin: 0 1rem 1rem 1rem;
-      h2 {
-        margin: 3rem 0;
-      }
-      li {
-        font-size: 2rem;
-      }
-    }
-
-    .weather {
-      flex: 1;
-    }
+  #cityRes,
+  #days,
+  #tripLength,
+  #currentWeather,
+  #weatherForecast {
+    place-self: center;
+    font-size: 7vw;
+    font-family: sans-serif;
+    padding: 5px;
+    margin: 50px;
   }
 }
 
@@ -87,5 +197,39 @@ $green-solid: rgba(12, 124, 89, 1);
     h3 {
       font-size: 2rem;
     }
+  }
+  .holder_entry {
+    padding: 10px;
+    border: 3px solid $blue-2;
+    border-radius: 5px;
+    margin:200px;
+  }
+
+  .responsive {
+    place-self: center;
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    background: linear-gradient(145deg, #cacaca, #f0f0f0);
+    box-shadow: 20px 20px 20px #bebebe;
+    margin: 10px;
+  }
+  #weathercard {
+    display: grid;
+    grid-template-columns: repeat(2, 300px);
+    font-size: 2vw;
+    font-family: sans-serif;
+  }
+
+  #cityRes,
+  #days,
+  #tripLength,
+  #currentWeather,
+  #weatherForecast {
+    place-self: center;
+    font-size: 2vw;
+    font-family: sans-serif;
+    padding: 5px;
+    margin: 5px;
   }
 }
